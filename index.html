@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <title>JAVASCRIPT</title>
+</head>
+
+<body>
+    <script>
+        // ЗАДАНИЯ ДЛЯ РАЗМИНКИ!!!!!!)))
+
+
+        //1) заходим в app.components.ts добавляем implements OnChanges к AppComponent затем добавляем функцию ngOnChanges и там пишем весь код
+        // d app.components.html создайте div с id куда будете запихивать результат! 
+        //  Для примера https://github.com/Serge0111/lesson-25 вот репозиторий как стартер!
+        //  - Создать enum из значений courseName! Пример enum
+        // enum CourseName {
+        //     EPAM = 'EPAM',
+        //     GLOBAL_LOGIC = 'GlobalLogic',
+        //     DATA_ART = 'DataArt',
+        //     SOFT_SERVE = 'SoftServe'
+        // }
+        //  доступ таким образом CourseName.EPAM
+        // - Написать код для генерации рандомного числа от 0 до 4
+        // - school.courses[rand] равен javascript basic то создаем в доме блок  с id, courseName, price! И при клике на этот блок добавляем description в этот блок
+        // 
+        function random(from, to) {
+        
+        const school = {
+            name: 'Hillel',
+            executive: 'Misha',
+            courses: [
+                {
+                    id: 10,
+                    courseName: 'Javascript basic',
+                    price: 5400, 
+                    description: 'JavaScript, often abbreviated as JS, is a high-level, interpreted scripting language that conforms to the ECMAScript specification. JavaScript has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.'
+                },
+                {
+                    id: 12,
+                    courseName: 'Javascript Pro',
+                    price: 6400,
+                    description: 'In November 1996, Netscape submitted JavaScript to ECMA International to carve out a standard specification, which other browser vendors could then implement based on the work done at Netscape'
+                },
+                {
+                    id: 2,
+                    courseName: 'Python',
+                    price: 6400,
+                    description: 'Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python\'s design philosophy emphasizes code readability with its notable use of significant whitespace.'
+                },
+                {
+                    id: 54,
+                    courseName: 'Php',
+                    price: 5400,
+                    description: 'PHP: Hypertext Preprocessor is a general-purpose programming language originally designed for web development. It was originally created by Rasmus Lerdorf in 1994; the PHP reference implementation is now produced by The PHP Group.'
+                }
+            ]
+        }
+        
+        // 2) Здесь вспоминаем основы и всплытие)!
+        var t = 32;
+        function calc() {
+            t = 3;
+            console.log(t);
+            return 21;
+            var t = 12;
+        }
+        calc();
+        console.log(t);// почему 32 а не 3??
+        // 3) Пишем интерфейс для этого класса! 
+        // Интерфейсы используются для типизации обьектом, а также для указания какие методы и/или свойства класс должен реализовать!
+        class Company {
+            public readonly company: any = {
+                name: 'GlobalLogic',
+                personnel: 4000,
+                rating: 3
+            }; // протипизировать company!
+            constructor() {
+            }
+            getCompanyName() {
+                return this.company.name;
+            }
+            getCompanyPersonnel() {
+                return this.personnel.personnel;
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>
